@@ -82,9 +82,9 @@ channel:
 
 remote:
   name: Manu343726
-  url: "https://api.bintray.com/conan/manu343726/conan-packages"
-  user: Manu343726
-  password: manu343726_bintray_key
+  url: "https://bincrafters.jfrog.io/artifactory/api/conan/llvm-incubator"
+  user: bincrafters-bot
+  password: CONAN_PASSWORD
 
 compilers:
   - gcc5

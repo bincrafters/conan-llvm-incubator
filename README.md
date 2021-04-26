@@ -1,8 +1,6 @@
-# LLVM and Clang projects packaged for conan
+# Bincrafters' LLVM Incubator
 
-[![Hosted By: Cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith&style=for-the-badge)](https://cloudsmith.com)
 
-Package repository hosting is graciously provided by  [Cloudsmith](https://cloudsmith.com).
-Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that
-enables your organization to create, store and share packages in any format, to any place, with total
-confidence.
+This repository contains work-in-progress modular recipes for LLVM.  
+
+Please report any issues [in our main repository](https://github.com/bincrafters/community).

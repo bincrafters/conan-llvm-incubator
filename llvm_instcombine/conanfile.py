@@ -1,7 +1,7 @@
 from conans import python_requires
 import os
 
-common = python_requires('llvm-common/0.0.0@Manu343726/testing')
+common = python_requires('llvm-common/0.0.0@bincrafters/testing')
 
 class LLVMInstCombine(common.LLVMModulePackage):
     version = common.LLVMModulePackage.version

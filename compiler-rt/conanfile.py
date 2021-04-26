@@ -1,5 +1,5 @@
 from conans import python_requires
-llvm_common = python_requires('llvm-common/0.0.0@Manu343726/testing')
+llvm_common = python_requires('llvm-common/0.0.0@bincrafters/testing')
 
 class CompilerRTConan(llvm_common.LLVMComponentPackage):
     name = "compiler-rt"
