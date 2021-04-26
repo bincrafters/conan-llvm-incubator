@@ -41,7 +41,7 @@ build_clang_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False clang clang/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang clang/6.0.1@bincrafters/testing
     --build=missing --build=clang
   - conan remove -b -s -f "*"
   - conan upload clang/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -67,7 +67,7 @@ build_clang_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False clang clang/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang clang/6.0.1@bincrafters/testing
     --build=missing --build=clang
   - conan remove -b -s -f "*"
   - conan upload clang/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -93,7 +93,7 @@ build_clang_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False clang clang/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang clang/6.0.1@bincrafters/testing
     --build=missing --build=clang
   - conan remove -b -s -f "*"
   - conan upload clang/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -119,7 +119,7 @@ build_clang_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False clang clang/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang clang/6.0.1@bincrafters/testing
     --build=missing --build=clang
   - conan remove -b -s -f "*"
   - conan upload clang/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -145,7 +145,7 @@ build_clang_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False clang clang/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang clang/6.0.1@bincrafters/testing
     --build=missing --build=clang
   - conan remove -b -s -f "*"
   - conan upload clang/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -171,7 +171,7 @@ build_clang_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False clang clang/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang clang/6.0.1@bincrafters/testing
     --build=missing --build=clang
   - conan remove -b -s -f "*"
   - conan upload clang/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -822,8 +822,7 @@ build_clang_basic_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
     --build=missing --build=clang_basic
   - conan remove -b -s -f "*"
   - conan upload clang_basic/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -849,8 +848,7 @@ build_clang_basic_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
     --build=missing --build=clang_basic
   - conan remove -b -s -f "*"
   - conan upload clang_basic/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -876,8 +874,7 @@ build_clang_basic_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
     --build=missing --build=clang_basic
   - conan remove -b -s -f "*"
   - conan upload clang_basic/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -903,8 +900,7 @@ build_clang_basic_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
     --build=missing --build=clang_basic
   - conan remove -b -s -f "*"
   - conan upload clang_basic/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -930,8 +926,7 @@ build_clang_basic_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
     --build=missing --build=clang_basic
   - conan remove -b -s -f "*"
   - conan upload clang_basic/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -957,8 +952,7 @@ build_clang_basic_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_basic clang_basic/6.0.1@bincrafters/testing
     --build=missing --build=clang_basic
   - conan remove -b -s -f "*"
   - conan upload clang_basic/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -984,8 +978,7 @@ build_clang_driver_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -998,8 +991,7 @@ build_clang_driver_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1012,8 +1004,7 @@ build_clang_driver_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1026,8 +1017,7 @@ build_clang_driver_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1040,8 +1030,7 @@ build_clang_driver_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1054,8 +1043,7 @@ build_clang_driver_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1068,8 +1056,7 @@ build_clang_driver_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1082,8 +1069,7 @@ build_clang_driver_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1096,8 +1082,7 @@ build_clang_driver_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1110,8 +1095,7 @@ build_clang_driver_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1124,8 +1108,7 @@ build_clang_driver_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1138,8 +1121,7 @@ build_clang_driver_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_driver clang_driver/6.0.1@bincrafters/testing
     --build=missing --build=clang_driver
   - conan remove -b -s -f "*"
   - conan upload clang_driver/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1152,7 +1134,7 @@ build_clang_edit_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_edit:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1165,7 +1147,7 @@ build_clang_edit_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_analysis:shared=True -o clang_edit:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1178,7 +1160,7 @@ build_clang_edit_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_edit:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1191,7 +1173,7 @@ build_clang_edit_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_analysis:shared=True -o clang_edit:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1204,7 +1186,7 @@ build_clang_edit_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_edit:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1217,7 +1199,7 @@ build_clang_edit_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_analysis:shared=True -o clang_edit:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1230,7 +1212,7 @@ build_clang_edit_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_edit:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1243,7 +1225,7 @@ build_clang_edit_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_analysis:shared=True -o clang_edit:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1256,7 +1238,7 @@ build_clang_edit_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_edit:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1269,7 +1251,7 @@ build_clang_edit_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_analysis:shared=True -o clang_edit:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1282,7 +1264,7 @@ build_clang_edit_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_edit:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1295,7 +1277,7 @@ build_clang_edit_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_analysis:shared=True -o clang_edit:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True
     clang_edit clang_edit/6.0.1@bincrafters/testing --build=missing --build=clang_edit
   - conan remove -b -s -f "*"
   - conan upload clang_edit/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -1308,8 +1290,7 @@ build_clang_executables_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False -o llvm_headers:shared=False
-    -o clang_headers:shared=False -o clang_executables:shared=False clang_executables
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_executables
     clang_executables/6.0.1@bincrafters/testing --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1322,9 +1303,7 @@ build_clang_executables_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o llvm:shared=True
-    -o compiler-rt:shared=True -o clang:shared=True -o llvm_headers:shared=True -o
-    clang_headers:shared=True -o clang_executables:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
     --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1337,8 +1316,7 @@ build_clang_executables_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False -o llvm_headers:shared=False
-    -o clang_headers:shared=False -o clang_executables:shared=False clang_executables
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_executables
     clang_executables/6.0.1@bincrafters/testing --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1351,9 +1329,7 @@ build_clang_executables_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o llvm:shared=True
-    -o compiler-rt:shared=True -o clang:shared=True -o llvm_headers:shared=True -o
-    clang_headers:shared=True -o clang_executables:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
     --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1366,8 +1342,7 @@ build_clang_executables_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False -o llvm_headers:shared=False
-    -o clang_headers:shared=False -o clang_executables:shared=False clang_executables
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_executables
     clang_executables/6.0.1@bincrafters/testing --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1380,9 +1355,7 @@ build_clang_executables_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o llvm:shared=True
-    -o compiler-rt:shared=True -o clang:shared=True -o llvm_headers:shared=True -o
-    clang_headers:shared=True -o clang_executables:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
     --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1395,8 +1368,7 @@ build_clang_executables_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False -o llvm_headers:shared=False
-    -o clang_headers:shared=False -o clang_executables:shared=False clang_executables
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_executables
     clang_executables/6.0.1@bincrafters/testing --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1409,9 +1381,7 @@ build_clang_executables_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o llvm:shared=True
-    -o compiler-rt:shared=True -o clang:shared=True -o llvm_headers:shared=True -o
-    clang_headers:shared=True -o clang_executables:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
     --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1424,8 +1394,7 @@ build_clang_executables_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False -o llvm_headers:shared=False
-    -o clang_headers:shared=False -o clang_executables:shared=False clang_executables
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_executables
     clang_executables/6.0.1@bincrafters/testing --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1438,9 +1407,7 @@ build_clang_executables_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o llvm:shared=True
-    -o compiler-rt:shared=True -o clang:shared=True -o llvm_headers:shared=True -o
-    clang_headers:shared=True -o clang_executables:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
     --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1453,8 +1420,7 @@ build_clang_executables_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default --o *:shared=False -o llvm_headers:shared=False
-    -o clang_headers:shared=False -o clang_executables:shared=False clang_executables
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_executables
     clang_executables/6.0.1@bincrafters/testing --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1467,9 +1433,7 @@ build_clang_executables_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o llvm:shared=True
-    -o compiler-rt:shared=True -o clang:shared=True -o llvm_headers:shared=True -o
-    clang_headers:shared=True -o clang_executables:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_executables clang_executables/6.0.1@bincrafters/testing
     --build=missing --build=clang_executables
   - conan remove -b -s -f "*"
   - conan upload clang_executables/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1482,8 +1446,7 @@ build_clang_format_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     -o clang_format:shared=False clang_format clang_format/6.0.1@bincrafters/testing
     --build=missing --build=clang_format
@@ -1498,10 +1461,7 @@ build_clang_format_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
     --build=clang_format
   - conan remove -b -s -f "*"
   - conan upload clang_format/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1514,8 +1474,7 @@ build_clang_format_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     -o clang_format:shared=False clang_format clang_format/6.0.1@bincrafters/testing
     --build=missing --build=clang_format
@@ -1530,10 +1489,7 @@ build_clang_format_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
     --build=clang_format
   - conan remove -b -s -f "*"
   - conan upload clang_format/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1546,8 +1502,7 @@ build_clang_format_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     -o clang_format:shared=False clang_format clang_format/6.0.1@bincrafters/testing
     --build=missing --build=clang_format
@@ -1562,10 +1517,7 @@ build_clang_format_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
     --build=clang_format
   - conan remove -b -s -f "*"
   - conan upload clang_format/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1578,8 +1530,7 @@ build_clang_format_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     -o clang_format:shared=False clang_format clang_format/6.0.1@bincrafters/testing
     --build=missing --build=clang_format
@@ -1594,10 +1545,7 @@ build_clang_format_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
     --build=clang_format
   - conan remove -b -s -f "*"
   - conan upload clang_format/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1610,8 +1558,7 @@ build_clang_format_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     -o clang_format:shared=False clang_format clang_format/6.0.1@bincrafters/testing
     --build=missing --build=clang_format
@@ -1626,10 +1573,7 @@ build_clang_format_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
     --build=clang_format
   - conan remove -b -s -f "*"
   - conan upload clang_format/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1642,8 +1586,7 @@ build_clang_format_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     -o clang_format:shared=False clang_format clang_format/6.0.1@bincrafters/testing
     --build=missing --build=clang_format
@@ -1658,10 +1601,7 @@ build_clang_format_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True clang_format clang_format/6.0.1@bincrafters/testing --build=missing
     --build=clang_format
   - conan remove -b -s -f "*"
   - conan upload clang_format/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1674,10 +1614,7 @@ build_clang_frontend_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
-    -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
-    -o clang_format:shared=False -o clang_frontend:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1690,10 +1627,7 @@ build_clang_frontend_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1706,10 +1640,7 @@ build_clang_frontend_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
-    -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
-    -o clang_format:shared=False -o clang_frontend:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1722,10 +1653,7 @@ build_clang_frontend_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1738,10 +1666,7 @@ build_clang_frontend_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
-    -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
-    -o clang_format:shared=False -o clang_frontend:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1754,10 +1679,7 @@ build_clang_frontend_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1770,10 +1692,7 @@ build_clang_frontend_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
-    -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
-    -o clang_format:shared=False -o clang_frontend:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1786,10 +1705,7 @@ build_clang_frontend_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1802,10 +1718,7 @@ build_clang_frontend_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
-    -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
-    -o clang_format:shared=False -o clang_frontend:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1818,10 +1731,7 @@ build_clang_frontend_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1834,10 +1744,7 @@ build_clang_frontend_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
-    -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
-    -o clang_format:shared=False -o clang_frontend:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -1850,10 +1757,7 @@ build_clang_frontend_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
-    -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True -o
-    clang_format:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_frontend:shared=True clang_frontend clang_frontend/6.0.1@bincrafters/testing
     --build=missing --build=clang_frontend
   - conan remove -b -s -f "*"
   - conan upload clang_frontend/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2028,8 +1932,7 @@ build_clang_lex_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False -o clang_lex:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_lex:shared=False
     clang_lex clang_lex/6.0.1@bincrafters/testing --build=missing --build=clang_lex
   - conan remove -b -s -f "*"
   - conan upload clang_lex/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -2055,8 +1958,7 @@ build_clang_lex_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False -o clang_lex:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_lex:shared=False
     clang_lex clang_lex/6.0.1@bincrafters/testing --build=missing --build=clang_lex
   - conan remove -b -s -f "*"
   - conan upload clang_lex/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -2082,8 +1984,7 @@ build_clang_lex_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False -o clang_lex:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_lex:shared=False
     clang_lex clang_lex/6.0.1@bincrafters/testing --build=missing --build=clang_lex
   - conan remove -b -s -f "*"
   - conan upload clang_lex/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -2109,8 +2010,7 @@ build_clang_lex_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False -o clang_lex:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_lex:shared=False
     clang_lex clang_lex/6.0.1@bincrafters/testing --build=missing --build=clang_lex
   - conan remove -b -s -f "*"
   - conan upload clang_lex/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -2136,8 +2036,7 @@ build_clang_lex_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False -o clang_lex:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_lex:shared=False
     clang_lex clang_lex/6.0.1@bincrafters/testing --build=missing --build=clang_lex
   - conan remove -b -s -f "*"
   - conan upload clang_lex/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -2163,8 +2062,7 @@ build_clang_lex_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default *:shared=False
-    -o llvm_x86_codegen:shared=False -o clang_basic:shared=False -o clang_lex:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_lex:shared=False
     clang_lex clang_lex/6.0.1@bincrafters/testing --build=missing --build=clang_lex
   - conan remove -b -s -f "*"
   - conan upload clang_lex/6.0.1@bincrafters/testing -r llvmincubator --all --force --retry
@@ -2190,8 +2088,7 @@ build_clang_parse_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2204,8 +2101,7 @@ build_clang_parse_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2218,8 +2114,7 @@ build_clang_parse_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2232,8 +2127,7 @@ build_clang_parse_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2246,8 +2140,7 @@ build_clang_parse_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2260,8 +2153,7 @@ build_clang_parse_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2274,8 +2166,7 @@ build_clang_parse_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2288,8 +2179,7 @@ build_clang_parse_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2302,8 +2192,7 @@ build_clang_parse_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2316,8 +2205,7 @@ build_clang_parse_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2330,8 +2218,7 @@ build_clang_parse_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2344,8 +2231,7 @@ build_clang_parse_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True clang_parse clang_parse/6.0.1@bincrafters/testing
     --build=missing --build=clang_parse
   - conan remove -b -s -f "*"
   - conan upload clang_parse/6.0.1@bincrafters/testing -r llvmincubator --all --force
@@ -2670,8 +2556,7 @@ build_clang_serialization_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2685,8 +2570,7 @@ build_clang_serialization_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2700,8 +2584,7 @@ build_clang_serialization_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2715,8 +2598,7 @@ build_clang_serialization_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2730,8 +2612,7 @@ build_clang_serialization_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2745,8 +2626,7 @@ build_clang_serialization_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2760,8 +2640,7 @@ build_clang_serialization_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2775,8 +2654,7 @@ build_clang_serialization_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2790,8 +2668,7 @@ build_clang_serialization_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2805,8 +2682,7 @@ build_clang_serialization_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2820,8 +2696,7 @@ build_clang_serialization_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -2835,8 +2710,7 @@ build_clang_serialization_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     clang_serialization clang_serialization/6.0.1@bincrafters/testing --build=missing
     --build=clang_serialization
   - conan remove -b -s -f "*"
@@ -3018,8 +2892,7 @@ build_clang_static_analyzer_core_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3033,8 +2906,7 @@ build_clang_static_analyzer_core_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3048,8 +2920,7 @@ build_clang_static_analyzer_core_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3063,8 +2934,7 @@ build_clang_static_analyzer_core_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3078,8 +2948,7 @@ build_clang_static_analyzer_core_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3093,8 +2962,7 @@ build_clang_static_analyzer_core_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3108,8 +2976,7 @@ build_clang_static_analyzer_core_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3123,8 +2990,7 @@ build_clang_static_analyzer_core_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3138,8 +3004,7 @@ build_clang_static_analyzer_core_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3153,8 +3018,7 @@ build_clang_static_analyzer_core_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3168,8 +3032,7 @@ build_clang_static_analyzer_core_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3183,8 +3046,7 @@ build_clang_static_analyzer_core_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True clang_static_analyzer_core clang_static_analyzer_core/6.0.1@bincrafters/testing
     --build=missing --build=clang_static_analyzer_core
   - conan remove -b -s -f "*"
@@ -3360,8 +3222,7 @@ build_clang_tooling_core_6.0.1_clang60_build_type=Release+shared=False:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     clang_tooling_core clang_tooling_core/6.0.1@bincrafters/testing --build=missing
     --build=clang_tooling_core
@@ -3376,8 +3237,7 @@ build_clang_tooling_core_6.0.1_clang60_build_type=Release+shared=True:
   image: conanio/clang60
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True clang_tooling_core
     clang_tooling_core/6.0.1@bincrafters/testing --build=missing --build=clang_tooling_core
   - conan remove -b -s -f "*"
@@ -3391,8 +3251,7 @@ build_clang_tooling_core_6.0.1_clang7_build_type=Release+shared=False:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     clang_tooling_core clang_tooling_core/6.0.1@bincrafters/testing --build=missing
     --build=clang_tooling_core
@@ -3407,8 +3266,7 @@ build_clang_tooling_core_6.0.1_clang7_build_type=Release+shared=True:
   image: conanio/clang7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True clang_tooling_core
     clang_tooling_core/6.0.1@bincrafters/testing --build=missing --build=clang_tooling_core
   - conan remove -b -s -f "*"
@@ -3422,8 +3280,7 @@ build_clang_tooling_core_6.0.1_gcc5_build_type=Release+shared=False:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     clang_tooling_core clang_tooling_core/6.0.1@bincrafters/testing --build=missing
     --build=clang_tooling_core
@@ -3438,8 +3295,7 @@ build_clang_tooling_core_6.0.1_gcc5_build_type=Release+shared=True:
   image: conanio/gcc5
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True clang_tooling_core
     clang_tooling_core/6.0.1@bincrafters/testing --build=missing --build=clang_tooling_core
   - conan remove -b -s -f "*"
@@ -3453,8 +3309,7 @@ build_clang_tooling_core_6.0.1_gcc6_build_type=Release+shared=False:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     clang_tooling_core clang_tooling_core/6.0.1@bincrafters/testing --build=missing
     --build=clang_tooling_core
@@ -3469,8 +3324,7 @@ build_clang_tooling_core_6.0.1_gcc6_build_type=Release+shared=True:
   image: conanio/gcc6
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True clang_tooling_core
     clang_tooling_core/6.0.1@bincrafters/testing --build=missing --build=clang_tooling_core
   - conan remove -b -s -f "*"
@@ -3484,8 +3338,7 @@ build_clang_tooling_core_6.0.1_gcc7_build_type=Release+shared=False:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     clang_tooling_core clang_tooling_core/6.0.1@bincrafters/testing --build=missing
     --build=clang_tooling_core
@@ -3500,8 +3353,7 @@ build_clang_tooling_core_6.0.1_gcc7_build_type=Release+shared=True:
   image: conanio/gcc7
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True clang_tooling_core
     clang_tooling_core/6.0.1@bincrafters/testing --build=missing --build=clang_tooling_core
   - conan remove -b -s -f "*"
@@ -3515,8 +3367,7 @@ build_clang_tooling_core_6.0.1_gcc8_build_type=Release+shared=False:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_rewrite:shared=False -o clang_sema:shared=False
-    -o clang_driver:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=False -o clang_parse:shared=False -o clang_serialization:shared=False
     -o clang_static_analyzer_core:shared=False -o clang_tooling_core:shared=False
     clang_tooling_core clang_tooling_core/6.0.1@bincrafters/testing --build=missing
     --build=clang_tooling_core
@@ -3531,8 +3382,7 @@ build_clang_tooling_core_6.0.1_gcc8_build_type=Release+shared=True:
   image: conanio/gcc8
   script:
   - conan profile update settings.build_type=Release default
-  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_rewrite:shared=True -o clang_sema:shared=True
-    -o clang_driver:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
+  - CONAN_VERSION_OVERRIDE=6.0.1 conan create --profile=default -o *:shared=True -o clang_parse:shared=True -o clang_serialization:shared=True
     -o clang_static_analyzer_core:shared=True -o clang_tooling_core:shared=True clang_tooling_core
     clang_tooling_core/6.0.1@bincrafters/testing --build=missing --build=clang_tooling_core
   - conan remove -b -s -f "*"
